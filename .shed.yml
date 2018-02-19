@@ -1,0 +1,8 @@
+categories: [Epigenetics]
+description: This tool finds differentially methylated positions (DMPs) with respect
+  to a phenotype covariate. The phenotype may be categorical (e.g. cancer vs. normal)
+  or continuous (e.g. blood pressure).
+homepage_url: https://github.com/kpbioteam/minfi_dmp
+name: minfi_dmp
+owner: kpbioteam
+remote_repository_url: https://github.com/kpbioteam/minfi_dmp
