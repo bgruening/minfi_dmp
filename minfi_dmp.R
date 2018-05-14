@@ -14,7 +14,7 @@ output1 = args[6]
 
 GRset <- get(load(input1))
 
-pheno <- read.csv(input2)
+pheno <- read.table(input2)
 
 type <- input3
 

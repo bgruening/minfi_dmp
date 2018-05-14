@@ -8,7 +8,7 @@
     ]]></command>
     <inputs>
          <param type="data" name="input1" format="rdata"  label="Genomic Ratio Set" />
-        <param type="data" name="input2" format="csv" label="Phenotype Table"/>
+        <param type="data" name="input2" format="tabular" label="Phenotype Table"/>
          
          <param name="input3" type="select" label="Phenotype Type">
                         <option value="categorical">categorical</option>
