@@ -14,6 +14,8 @@ output1 = args[6]
 
 set <- get(load(input1))
 
+beta <- getBeta(GRset)
+
 pheno <- read.table(input2,skip=1)
 
 type <- input3
@@ -22,6 +24,6 @@ qCutoff <- as.numeric(input4)
 
 shrinkVar <- input5
 
-dmp <- dmpFinder(set, pheno$V2, type = type, qCutoff = qCutoff, shrinkVar = shrinkVar)
+dmp <- dmpFinder(beta, pheno$V2, type = type, qCutoff = qCutoff, shrinkVar = shrinkVar)
 
 write.table(dmp, output1)
