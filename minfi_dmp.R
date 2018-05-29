@@ -14,7 +14,7 @@ output1 = args[6]
 
 set <- get(load(input1))
 
-beta <- getBeta(GRset)
+beta <- getBeta(set)
 
 pheno <- read.table(input2,skip=1)
 
