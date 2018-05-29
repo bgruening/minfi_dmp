@@ -7,7 +7,7 @@
         Rscript  ${__tool_directory__}/minfi_dmp.R  "$input1" "$input2" "$input3" "$input4" "$input5" "$output1"
     ]]></command>
     <inputs>
-         <param type="data" name="input1" format="rdata,tabular"  label="MethylSet or a matrix" />
+         <param type="data" name="input1" format="rdata"  label="Input Set" help="MethylSet, RatioSet or GenomicRatioSet" />
         <param type="data" name="input2" format="tabular" label="Phenotype Table"/>
          
          <param name="input3" type="select" label="Phenotype Type">

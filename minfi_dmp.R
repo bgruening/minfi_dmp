@@ -12,11 +12,7 @@ input4 = args[4]
 input5 = args[5]
 output1 = args[6]
 
-if (input1 = .rdata){
 set <- get(load(input1))
-}else{
-  set <- read.table(input1)
-}
 
 pheno <- read.table(input2,skip=1)
 
