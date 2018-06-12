@@ -26,4 +26,4 @@ shrinkVar <- input5
 
 dmp <- dmpFinder(beta, pheno$V2, type = type, qCutoff = qCutoff, shrinkVar = shrinkVar)
 
-write.table(dmp, output1)
+export.bed(dmp,output1)
