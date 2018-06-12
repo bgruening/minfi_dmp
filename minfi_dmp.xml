@@ -1,8 +1,9 @@
 <tool id="minfi_dmp" name="minfi_dmp" version="0.1.0">
     <description>to find differentially methylated positions</description>
     <requirements>
-        <requirement type="package" version="1.24.0">bioconductor-minfi</requirement>
-    </requirements>
+    <requirement type="package" version="1.24.0">bioconductor-minfi</requirement>
+    <requirement type="package" version="1.38.3">bioconductor-rtracklayer</requirement>
+ </requirements>
     <command detect_errors="exit_code"><![CDATA[
         Rscript  ${__tool_directory__}/minfi_dmp.R  "$input1" "$input2" "$input3" "$input4" "$input5" "$output1"
     ]]></command>

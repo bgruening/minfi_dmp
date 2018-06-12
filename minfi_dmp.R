@@ -1,4 +1,5 @@
 require("minfi", quietly = TRUE)
+require("rtracklayer", quietly = TRUE)
 
 options(warn = -1)
 options("download.file.method"="wget")
