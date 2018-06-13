@@ -15,6 +15,8 @@ output1 = args[6]
 
 set <- get(load(input1))
 
+genomeranges <- as.data.frame(ranges(set))
+
 beta <- getBeta(set)
 
 pheno <- read.table(input2,skip=1)
@@ -27,4 +29,8 @@ shrinkVar <- input5
 
 dmp <- dmpFinder(beta, pheno$V2, type = type, qCutoff = qCutoff, shrinkVar = shrinkVar)
 
-export.bed(dmp,output1)
+dmp$names <- rownames(dmp)
+
+data <- merge(dmp, genomeranges, by="names",sort = TRUE)
+
+write.table(data, file= output1, quote = FALSE,col.names = FALSE, row.names = FALSE, sep = "\t")
