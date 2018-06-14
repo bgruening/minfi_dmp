@@ -22,7 +22,7 @@
                         <option value="TRUE">TRUE</option>
                         <option value="FALSE">FALSE</option>
                     </param>
-                     
+<param type="data" name="input6" format="tabular" label="Genome Table" help="UCSC genome data cpgIslandExt"/>                     
     </inputs>
     <outputs>
         <data name="output1" format="bed" label= "Differentially Methylated Positions"/>
