@@ -11,11 +11,18 @@ input2 = args[2]
 input3 = args[3]
 input4 = args[4]
 input5 = args[5]
-output1 = args[6]
+input6 = args[6]
+output1 = args[7]
 
 set <- get(load(input1))
 
 genomeranges <- as.data.frame(ranges(set))
+
+tab <- read.table(input6)
+
+tab <- tab[,-(11:14),drop=FALSE] 
+
+colnames(tab) <- c("seqname","source","feature","start","end","score","strand",	"frame","attributes", "names")
 
 beta <- getBeta(set)
 
@@ -31,6 +38,6 @@ dmp <- dmpFinder(beta, pheno$V2, type = type, qCutoff = qCutoff, shrinkVar = shr
 
 dmp$names <- rownames(dmp)
 
-data <- merge(dmp, genomeranges, by="names",sort = TRUE)
+data <- merge(dmp, tab, by="names",sort = TRUE)
 
 write.table(data, file= output1, quote = FALSE,col.names = FALSE, row.names = FALSE, sep = "\t")
