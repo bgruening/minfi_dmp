@@ -1,5 +1,4 @@
 require("minfi", quietly = TRUE)
-require("rtracklayer", quietly = TRUE)
 
 options(warn = -1)
 options("download.file.method"="wget")
@@ -24,6 +23,12 @@ tab <- tab[,-(11:14),drop=FALSE]
 
 colnames(tab) <- c("seqname","source","feature","start","end","score","strand",	"frame","attributes", "names")
 
+tab$source <- NULL
+
+tab$frame <- NULL
+
+tab$attributes <- NULL
+
 beta <- getBeta(set)
 
 pheno <- read.table(input2,skip=1)
@@ -39,5 +44,7 @@ dmp <- dmpFinder(beta, pheno$V2, type = type, qCutoff = qCutoff, shrinkVar = shr
 dmp$names <- rownames(dmp)
 
 data <- merge(dmp, tab, by="names",sort = TRUE)
+
+data <- data[c("seqname","start","end","names","score","strand", "feature","intercept", "f", "pval","qval")]
 
 write.table(data, file= output1, quote = FALSE,col.names = FALSE, row.names = FALSE, sep = "\t")

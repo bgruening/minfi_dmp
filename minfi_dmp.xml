@@ -25,7 +25,7 @@
 <param type="data" name="input6" format="tabular" label="Genome Table" help="UCSC genome data Methyl450"/>                     
     </inputs>
     <outputs>
-        <data name="output1" format="bed" label= "Differentially Methylated Positions"/>
+        <data name="output1" format="bedgraph" label= "Differentially Methylated Positions"/>
     </outputs>
     <tests>
         <test>
@@ -34,12 +34,11 @@
             <param name="input3" value="categorical"/>
             <param name="input4" value="1"/>
             <param name="input5" value="FALSE"/>
-            <output name="output1" file="dmp.txt"/>
+            <output name="output1" file="dmp.bedgraph"/>
         </test>
     </tests>
     <help><![CDATA[
-        This tool finds differentially methylated positions (DMPs) with respect to a phenotype covariate. The phenotype may be categorical (e.g. cancer vs. normal) or continuous (e.g. blood pressure).
-    ]]></help>
+This tool finds differentially methylated positions (DMPs) with respect to a phenotype covariate. The phenotype may be categorical (e.g. cancer vs. normal) or continuous (e.g. blood pressure). Tool retutn multiple values: seqnames start end cpg names score strand feature intercept f pval qval    ]]></help>
     <citations>
         <citation type="doi">10.1093/bioinformatics/btu049</citation>
     </citations>
