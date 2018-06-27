@@ -38,7 +38,8 @@
         </test>
     </tests>
     <help><![CDATA[
-This tool finds differentially methylated positions (DMPs) with respect to a phenotype covariate. The phenotype may be categorical (e.g. cancer vs. normal) or continuous (e.g. blood pressure). Tool retutn multiple values: seqnames start end cpg names score strand feature intercept f pval qval    ]]></help>
+The tool outputs  differentially methylated positions (DMPs) with respect to a phenotype covariate. The phenotype may be categorical (e.g. cancer vs. normal) or continuous (e.g. blood pressure). Tool return multiple values: seqnames start end cpg names score strand feature intercept f pval qval
+ ]]></help>
     <citations>
         <citation type="doi">10.1093/bioinformatics/btu049</citation>
     </citations>
